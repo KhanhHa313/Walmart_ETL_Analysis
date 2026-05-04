@@ -1,6 +1,10 @@
 import logging 
 import pandas as pd
 from config import SALES_FILE, STORES_FILE, FEATURES_FILE
+from logging_set_up import setup_logging
+
+# SET UP THE LOG 
+setup_logging()
 
 # EXTRACT FUNCTIONS
 

@@ -58,3 +58,38 @@
 2026-05-04 22:31:05,327 - INFO - Extraction complete!!
 2026-05-04 22:31:05,344 - INFO - Data merged successfully!!
 2026-05-04 22:31:05,345 - INFO - Data astype complete!!
+2026-05-04 22:45:37,494 - INFO - Logging initialised successfully
+2026-05-04 22:45:37,494 - INFO - Will start data extraction...
+2026-05-04 22:45:37,605 - INFO - Sales loaded: 421570 rows
+2026-05-04 22:45:37,607 - INFO - Stores loaded: 45 rows
+2026-05-04 22:45:37,613 - INFO - Features loaded: 8190 rows
+2026-05-04 22:45:37,613 - INFO - Extraction complete!!
+2026-05-04 22:45:37,613 - INFO - Proceed to merging the three tables
+2026-05-04 22:45:37,635 - INFO - Data merged successfully!!
+2026-05-04 22:45:37,635 - INFO - Proceed to updating the data type for the merged data frame
+2026-05-04 22:45:37,636 - INFO - Data astype complete!!
+2026-05-04 22:45:55,425 - INFO - Logging initialised successfully
+2026-05-04 22:45:55,426 - INFO - Will start data extraction...
+2026-05-04 22:45:55,532 - INFO - Sales loaded: 421570 rows
+2026-05-04 22:45:55,533 - INFO - Stores loaded: 45 rows
+2026-05-04 22:45:55,540 - INFO - Features loaded: 8190 rows
+2026-05-04 22:45:55,540 - INFO - Extraction complete!!
+2026-05-04 22:45:55,540 - INFO - Proceed to merging the three tables
+2026-05-04 22:45:55,558 - INFO - Data merged successfully!!
+2026-05-04 22:45:55,558 - INFO - Proceed to updating the data type for the merged data frame
+2026-05-04 22:45:55,558 - INFO - Data astype complete!!
+2026-05-04 22:45:55,562 - INFO - Negative and Zero markdown data records have been converted to NaN
+2026-05-04 22:51:57,249 - INFO - Logging initialised successfully
+2026-05-04 22:51:57,249 - INFO - Will start data extraction...
+2026-05-04 22:51:57,367 - INFO - Sales loaded: 421570 rows
+2026-05-04 22:51:57,368 - INFO - Stores loaded: 45 rows
+2026-05-04 22:51:57,375 - INFO - Features loaded: 8190 rows
+2026-05-04 22:51:57,375 - INFO - Extraction complete!!
+2026-05-04 22:51:57,375 - INFO - Proceed to merging the three tables
+2026-05-04 22:51:57,400 - INFO - Data merged successfully!!
+2026-05-04 22:51:57,400 - INFO - Proceed to updating the data type for the merged data frame
+2026-05-04 22:51:57,401 - INFO - Data astype complete!!
+2026-05-04 22:51:57,404 - INFO - Proceed to looking into negative and zero markdown data
+2026-05-04 22:51:57,405 - INFO - There is no markdown having more than 5.0% of negative
+2026-05-04 22:51:57,405 - INFO - The negatives have then been converted to NaN
+2026-05-04 22:51:57,406 - INFO - Negative and Zero markdown data records have been converted to NaN

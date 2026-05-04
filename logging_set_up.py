@@ -17,6 +17,8 @@ def setup_logging():
     
     logging.info("Logging initialised successfully")
 
+# TEST RUN
+
 if __name__ == "__main__":
     setup_logging()
     logging.info("hello")

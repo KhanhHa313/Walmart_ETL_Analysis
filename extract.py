@@ -18,9 +18,12 @@ def load_raw_data():
     features = pd.read_csv(FEATURES_FILE, parse_dates=['Date'])
     logging.info(f"Features loaded: {len(features)} rows")
     
-    logging.info("Extraction complete")
+    logging.info("Extraction complete!!")
     
     return sales, stores, features
+
+if __name__ == "__main__":
+    sales, stores, features = load_raw_data()
 
  
 

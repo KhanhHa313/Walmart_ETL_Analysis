@@ -86,6 +86,39 @@ def fix_negative_or_zero_markdowns(df, pct = 0.05):
 
     return None
 
+def add_columns(df): 
+    #Find the total markdown 
+    logging.info("Adding the total markdown column")
+
+    df['Total_Markdown'] = df[MARKDOWN_COLS].sum(axis = 1)
+
+    #Create the binary flag for the markdown for each week 
+    logging.info("Adding the markdown flag column")
+    df['Has_Markdown'] = df['Total_Markdown'] > 0
+
+    #Add quarter and year columns 
+    logging.info("Adding date component columns")
+    df.insert(2, 'Year', df['Date'].dt.year) 
+    df.insert(3, 'Quarter', df['Date'].dt.quarter) 
+    df.insert(4, 'Month', df['Date'].dt.month) 
+    
+
+    #Add size category column
+    logging.info("Adding the store size category column")
+    size_buckets = [0, 50000, 100000,150000, 200000, np.inf]
+    size_bucket_labels = ['Less than 50k',
+                          'Between 50k and 100k',
+                         'Between 100k and 150k',
+                         'Between 150k and 200k',
+                          'More than 200k']
+    df['Size_Category'] = pd.Categorical (pd.cut (df['Size'], bins = size_buckets, 
+                                     labels = size_bucket_labels),
+                                        categories = size_bucket_labels,
+                                        ordered = True,
+                                         )
+    logging.info("Adding the columns successfully!!")
+
+    return df
 
 # TEST RUN
 
@@ -95,6 +128,7 @@ if __name__ == "__main__":
     df = merge_tables(sales, stores, features)
     df = update_data_types(df)
     fix_negative_or_zero_markdowns(df, pct = 0.05)
+    add_columns(df) 
  
     # df = add_feature_flags(df)
     # validate_dataframe(df)

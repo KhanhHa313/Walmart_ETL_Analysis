@@ -1,8 +1,8 @@
 import logging
 import pandas as pd
-from logging_set_up import setup_logging
-from extract import load_raw_data
-from config import MARKDOWN_COLS 
+from utils.logging_set_up import setup_logging
+from ETL.extract import load_raw_data
+from utils.config import MARKDOWN_COLS 
 import numpy as np
 
  

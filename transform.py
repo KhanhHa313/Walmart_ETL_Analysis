@@ -120,6 +120,32 @@ def add_columns(df):
 
     return df
 
+
+def validate_dataframe(df):
+    #To facilitate later analysis, this funtion is for checking whether our data at the time have all the needed columns 
+    logging.info("Checking all the required columns for the analysis")
+
+    required_columns = [
+        'Store',
+        'Date',
+        'Year',
+        'Quarter',
+        'Month',
+        'Weekly_Sales',
+        'Is_Holiday', 
+        'Has_Markdown',
+        'Total_Markdown',
+        'Size',
+        'Size_Category',
+    ] + MARKDOWN_COLS
+    
+    missing = [col for col in required_columns if col not in df.columns]
+    
+    if missing:
+        logging.warning(f"Missing columns: {missing}")
+    else:
+        logging.info("Dataframe validated - all required columns present")
+
 # TEST RUN
 
 if __name__ == "__main__":
@@ -128,9 +154,8 @@ if __name__ == "__main__":
     df = merge_tables(sales, stores, features)
     df = update_data_types(df)
     fix_negative_or_zero_markdowns(df, pct = 0.05)
-    add_columns(df) 
- 
-    # df = add_feature_flags(df)
-    # validate_dataframe(df)
+    df = add_columns(df) 
+    validate_dataframe(df)
+    
     print(f"Shape of dataframe: {df.shape}")
     print(f"Columns of dataframe: {df.columns.tolist()}")

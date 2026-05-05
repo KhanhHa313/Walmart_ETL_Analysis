@@ -93,3 +93,24 @@
 2026-05-04 22:51:57,405 - INFO - There is no markdown having more than 5.0% of negative
 2026-05-04 22:51:57,405 - INFO - The negatives have then been converted to NaN
 2026-05-04 22:51:57,406 - INFO - Negative and Zero markdown data records have been converted to NaN
+2026-05-06 00:03:20,527 - INFO - Logging initialised successfully
+2026-05-06 00:03:20,528 - INFO - Will start data extraction...
+2026-05-06 00:03:20,702 - INFO - Sales loaded: 421570 rows
+2026-05-06 00:03:20,704 - INFO - Stores loaded: 45 rows
+2026-05-06 00:03:20,713 - INFO - Features loaded: 8190 rows
+2026-05-06 00:03:20,713 - INFO - Extraction complete!!
+2026-05-06 00:03:20,713 - INFO - Proceed to merging the three tables
+2026-05-06 00:03:20,745 - INFO - Data merged successfully!!
+2026-05-06 00:03:20,746 - INFO - Proceed to updating the data type for the merged data frame
+2026-05-06 00:03:20,746 - INFO - Data astype complete!!
+2026-05-06 00:03:20,750 - INFO - Proceed to looking into negative and zero markdown data
+2026-05-06 00:03:20,751 - INFO - There is no markdown having more than 5.0% of negative
+2026-05-06 00:03:20,752 - INFO - The negatives have then been converted to NaN
+2026-05-06 00:03:20,754 - INFO - Negative and Zero markdown data records have been converted to NaN
+2026-05-06 00:03:20,754 - INFO - Adding the total markdown column
+2026-05-06 00:03:20,755 - INFO - Adding the markdown flag column
+2026-05-06 00:03:20,756 - INFO - Adding date component columns
+2026-05-06 00:03:20,757 - INFO - Adding the store size category column
+2026-05-06 00:03:20,759 - INFO - Adding the columns successfully!!
+2026-05-06 00:03:20,759 - INFO - Checking all the required columns for the analysis
+2026-05-06 00:03:20,759 - INFO - Dataframe validated - all required columns present

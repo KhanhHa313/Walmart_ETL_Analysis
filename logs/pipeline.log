@@ -114,3 +114,29 @@
 2026-05-06 00:03:20,759 - INFO - Adding the columns successfully!!
 2026-05-06 00:03:20,759 - INFO - Checking all the required columns for the analysis
 2026-05-06 00:03:20,759 - INFO - Dataframe validated - all required columns present
+2026-05-06 00:12:59,450 - INFO - Logging initialised successfully
+2026-05-06 00:12:59,450 - INFO - Will start data extraction...
+2026-05-06 00:12:59,621 - INFO - Sales loaded: 421570 rows
+2026-05-06 00:12:59,622 - INFO - Stores loaded: 45 rows
+2026-05-06 00:12:59,631 - INFO - Features loaded: 8190 rows
+2026-05-06 00:12:59,631 - INFO - Extraction complete!!
+2026-05-06 00:12:59,631 - INFO - Proceed to merging the three tables
+2026-05-06 00:12:59,663 - INFO - Data merged successfully!!
+2026-05-06 00:12:59,663 - INFO - Proceed to updating the data type for the merged data frame
+2026-05-06 00:12:59,664 - INFO - Data astype complete!!
+2026-05-06 00:12:59,667 - INFO - Proceed to looking into negative and zero markdown data
+2026-05-06 00:12:59,668 - INFO - There is no markdown having more than 5.0% of negative
+2026-05-06 00:12:59,668 - INFO - The negatives have then been converted to NaN
+2026-05-06 00:12:59,670 - INFO - Negative and Zero markdown data records have been converted to NaN
+2026-05-06 00:12:59,670 - INFO - Adding the total markdown column
+2026-05-06 00:12:59,672 - INFO - Adding the markdown flag column
+2026-05-06 00:12:59,672 - INFO - Adding date component columns
+2026-05-06 00:12:59,674 - INFO - Adding the store size category column
+2026-05-06 00:12:59,676 - INFO - Adding the columns successfully!!
+2026-05-06 00:12:59,676 - INFO - Checking all the required columns for the analysis
+2026-05-06 00:12:59,676 - INFO - Dataframe validated - all required columns present
+2026-05-06 00:12:59,676 - INFO - Proceed to looking into negative and zero sales data
+2026-05-06 00:12:59,676 - INFO - There are less than 5.0% of Weekly_Sales that are <= 0
+2026-05-06 00:12:59,676 - INFO - These values then therefore will 
+            be converted to the median along with the other NaN unless stated otherwise
+2026-05-06 00:12:59,679 - INFO - Done the weekly_sales updates!!

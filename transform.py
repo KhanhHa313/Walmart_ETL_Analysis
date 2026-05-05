@@ -146,6 +146,37 @@ def validate_dataframe(df):
     else:
         logging.info("Dataframe validated - all required columns present")
 
+
+
+def fix_negative_or_zero_sales(df, pct = 0.05):
+    # Calculate percentage of bad values
+    logging.info("Proceed to looking into negative and zero sales data")
+
+    error_mask = df['Weekly_Sales'] <= 0
+    error_ratio = error_mask.mean()
+
+    if error_ratio > pct:
+        info.warning(
+            f"More than {pct*100}% ({bad_ratio:.2%}) of Weekly_Sales are <= 0. Please check data."
+        )
+    else: 
+        # Replace error values with median of the month if less than given  (default is 5%) 
+        logging.info(f"There are less than {pct*100}% of Weekly_Sales that are <= 0")
+        logging.info('These values then therefore will be converted to the median along with the other NaN unless stated otherwise')
+
+        df.loc[error_mask, 'Weekly_Sales'] = np.nan
+
+        # Fill all the NaN with median by Store, Year, Month
+        median_vals = df.groupby(['Store', 'Year', 'Month'])['Weekly_Sales'].transform('median')
+        df['Weekly_Sales'] = df['Weekly_Sales'].fillna(median_vals)
+
+        logging.info("Done the weekly_sales updates!!")
+
+        return df
+
+
+
+
 # TEST RUN
 
 if __name__ == "__main__":
@@ -156,6 +187,7 @@ if __name__ == "__main__":
     fix_negative_or_zero_markdowns(df, pct = 0.05)
     df = add_columns(df) 
     validate_dataframe(df)
-    
+    df = fix_negative_or_zero_sales(df, pct = 0.05)
+
     print(f"Shape of dataframe: {df.shape}")
     print(f"Columns of dataframe: {df.columns.tolist()}")

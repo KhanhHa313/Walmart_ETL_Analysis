@@ -51,6 +51,30 @@ def markdown_count_storesize_impact (df):
     return final.set_index (['Size_Category','Markdown_Counts']), fig
 
 
+def each_store_md_combo (df):
+    #Define which combo of markdown work best for each store size with obs counts
+    logging.info("Checking which combo of markdowns have most sales...")
+    logging.info("User choose a size to investigate...")
+    input_size_category = input ("Choose the size category: ")
+
+    melted = df.melt (id_vars = ['Store','Size_Category', 'Date', 'Weekly_Sales'], 
+                      value_vars = MARKDOWN_COLS,
+                      var_name = 'Markdown_Type', 
+                      value_name = 'Values')
+    
+    store_group = melted[(melted['Values'].notna()) & (melted['Size_Category'] == input_size_category.strip().capitalize())]
+    store_group = store_group.groupby(['Date','Weekly_Sales'])['Markdown_Type']\
+                             .apply(lambda x: ' + '.join (sorted(x)))\
+                             .reset_index()
+                                                         
+    final = store_group.groupby ('Markdown_Type').agg(Count_Obs = ('Date','count'),
+                                             Median_Sales = ('Weekly_Sales','median'))
+    
+    logging.info ("Returning results and chart...")
+    logging.info (f"Done the markdown combo impact analysis on store size {input_size_category.strip().capitalize()}!!")
+
+    return final.sort_values ('Median_Sales', ascending = False), None
+
 # TEST RUN
 
 if __name__ == "__main__":
@@ -59,3 +83,4 @@ if __name__ == "__main__":
                  
     setup_logging()
     markdown_count_storesize_impact (df)
+    each_store_md_combo (df)

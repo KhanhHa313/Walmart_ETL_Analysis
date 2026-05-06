@@ -188,6 +188,6 @@ if __name__ == "__main__":
     df = add_columns(df) 
     validate_dataframe(df)
     df = fix_negative_or_zero_sales(df, pct = 0.05)
-
+    
     print(f"Shape of dataframe: {df.shape}")
     print(f"Columns of dataframe: {df.columns.tolist()}")

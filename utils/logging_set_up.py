@@ -1,6 +1,6 @@
 import os 
 import logging
-from config import LOG_PATH
+from utils.config import LOG_PATH
 
 # LOGGING SETUP
 def setup_logging():

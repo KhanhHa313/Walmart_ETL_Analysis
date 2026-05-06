@@ -3,6 +3,7 @@ import logging
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import numpy as np
 from utils.logging_set_up import setup_logging
 from utils.config import OUTPUT_PATH
 
@@ -52,11 +53,50 @@ def markdown_uplift_analysis_store (df):
     return store_markdown.sort_values ('Uplift %', ascending = False), fig
  
 
+def markdown_uplift_analysis_store_size (df):
+    #As the size each store is unique to itself so I will divide into each category for this analysis question 
+    logging.info ("Checking the markdown sales uplift across all stores...")
+
+    size_buckets = [0, 50000, 100000,150000, 200000, np.inf]
+    size_bucket_labels = ['Less than 50k',
+                          'Between 50k and 100k',
+                         'Between 100k and 150k',
+                         'Between 150k and 200k',
+                          'More than 200k']
+    
+    df['Size_Category'] = pd.cut (df['Size'], bins = size_buckets, labels = size_bucket_labels)
+     
+    size_markdown = df.groupby(['Size_Category', 'Has_Markdown'])['Weekly_Sales'].agg(['median','count']).unstack()
+    
+    size_markdown.columns = ['No_Markdown_Median','Markdown_Median',
+                           'No_Markdown_Count','Markdown_Count']
+    
+    size_markdown['Uplift %'] = (size_markdown['Markdown_Median'] - size_markdown['No_Markdown_Median'])/ size_markdown['No_Markdown_Median']*100
+
+    
+    #Draw visualisable plots
+    logging.info ("Drawing visualisable plot...")
+    plot_data = size_markdown.reset_index()
+
+    #Create figure explicitly
+    fig, ax = plt.subplots()
+    sns.barplot (x = 'Size_Category', y = 'Uplift %', data = plot_data, color = '#1AC938')
+    plt.xticks (plot_data['Size_Category'],rotation = 45)
+    plt.title ('Markdown uplift by store size category')
+
+    logging.info ("Returning results and chart...")
+    logging.info ("Done the store size markdown uplift analysis!!")
+    
+    return size_markdown.sort_values ('Uplift %', ascending = False), fig
+
+
 # TEST RUN
 
 if __name__ == "__main__":
     df = pd.read_csv(os.path.join(OUTPUT_PATH, 'transformed_dataset.csv'), 
                  parse_dates=['Date'])
+                 
     setup_logging()
     markdown_uplift_analysis_store(df)
+    markdown_uplift_analysis_store_size(df)
 

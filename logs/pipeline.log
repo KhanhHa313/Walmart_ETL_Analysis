@@ -196,3 +196,5 @@
 2026-05-06 18:17:29,141 - INFO - There are less than 5.0% of Weekly_Sales that are <= 0
 2026-05-06 18:17:29,141 - INFO - These values then therefore will be converted to the median along with the other NaN unless stated otherwise
 2026-05-06 18:17:29,143 - INFO - Done the weekly_sales updates!!
+2026-05-06 18:39:46,307 - INFO - Logging initialised successfully
+2026-05-06 18:39:46,308 - INFO - Checking the quarterly sale patterns across years of all stores...

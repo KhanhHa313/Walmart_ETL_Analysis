@@ -13,8 +13,11 @@ The analysis questions a common retail assumption: that more promotional activit
 
 ## Repository Structure
 
+```
 WALMART ETL/
-├── etl/                        # Core pipeline modules
+├── README.md
+├── Walmart ETL.ipynb           # Original notebook 
+├── ETL/                        # Core pipeline modules
 │   ├── extract.py              # Data ingestion (CSVs)
 │   ├── transform.py            # Cleaning & feature engineering
 │   ├── load.py                 # Export logic to outputs/
@@ -27,14 +30,22 @@ WALMART ETL/
 │   ├── features.csv
 │   ├── sales.csv
 │   └── store.csv
+├── analysis_question/                        
+│   ├── combined_impact.py            
+│   ├── holiday_impact.py            
+│   ├── markdown_combo.py
+│   ├── markdown_impact.py
+│   ├── quarterly_pattern.py                                 
+│   └── __init__.py
 ├── outputs/                    # Processed results & charts
+│   ├── charts.png           
+│   ├── dataframe.csv             
 ├── logs/                       # Execution history
 │   └── pipeline.log
-├── docs/                       # Project documentation
-│   ├── README.md
-│   └── notebook.ipynb
 ├── .gitignore                  # Skips __pycache__ and logs
 └── main.py                     # Entry point to run pipeline
+```
+
 
 
 ## Dataset

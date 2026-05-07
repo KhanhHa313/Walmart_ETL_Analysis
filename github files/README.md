@@ -108,7 +108,7 @@ However, a 4-markdown combo did not consistently outperform a 3-markdown combo, 
 
  
 
-## Technical Stack
+## Technical Stack used
 
 | Tool | Usage |
 |------|-------|
@@ -129,7 +129,7 @@ cd walmart_etl
 
 **2. Install dependencies**
 ```bash
-pip install pandas matplotlib seaborn
+pip install pandas matplotlib seaborn numpy 
 ```
 
 **3. Add raw data files**
@@ -140,9 +140,11 @@ Place `sales.csv`, `stores.csv`, and `features.csv` into `data/raw/`.
 ```bash
 python main.py
 ```
+*A bit about the main.py:*
+When prompted, you can select an analysis question by number. The pipeline will save the corresponding CSV and chart to the outputs folder automatically. Outputs will be saved to `outputs/` and logs written to `logs/pipeline.log`
 
-Outputs will be saved to `outputs/` and logs written to `logs/pipeline.log`.
 
+![Options given](image.png)
  
 
 ## Design Decisions

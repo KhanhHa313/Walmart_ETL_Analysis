@@ -1,0 +1,5 @@
+,Holiday_vs_Markdown,Interpretation,Median Sales,Week Counts,Uplift %
+3,Non_Holiday + Non_Markdown,Peak demand (stacked effects),950255.0149999999,3870,0.0
+2,Non_Holiday + Markdown,Holiday Demand spike,971386.65,2115,2.223785685572007
+1,Holiday + Non_Markdown,Markdown effects only,1004941.65,270,5.754943055996408
+0,Holiday + Markdown,Baseline Demand,1082697.635,180,13.937587059195907

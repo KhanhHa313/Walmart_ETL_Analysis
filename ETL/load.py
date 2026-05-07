@@ -17,17 +17,39 @@ def load_results (df, output_path = OUTPUT_PATH):
     '''Acts as a generalised loader that takes a dataframe and any analysis function, run it and save the result as CSVs 
     and corresponding charts as PNG'''
 
+    #Listing out all the function that user could choose from 
     function_map = {
-        ('1' : 'quarterly_sales_pattern'),
-        ('2' : 'markdown_uplift_analysis_store'),
-        ('3' : 'markdown_uplift_analysis_store_size'),
-        ('4' : 'markdown_count_storesize_impact'),
-        ('5' : 'each_store_md_combo'),
-        ('6' : 'holiday_impact'),
-        ('7' : 'holiday_vs_md_amplify')
+        '1' : quarterly_sales_pattern,
+        '2' : markdown_uplift_analysis_store,
+        '3' : markdown_uplift_analysis_store_size,
+        '4' : markdown_count_storesize_impact,
+        '5' : each_store_md_combo,
+        '6' : holiday_impact,
+        '7' : holiday_vs_md_amplify
     }
- 
-    analysis_func = input('Analysis function you want to look at: ')
+    
+    logging.info("Letting user choose the analysis question they want to look at...")
+    print("What analysis question you want to look at (Pick a number): ")
+
+    #While true is used for in case user choose function that is not listed 
+    while True: 
+        print(''' 1. quarterly_sales_pattern \n 2. markdown_uplift_analysis_store \n 3. markdown_uplift_analysis_store_size \n 4. markdown_count_storesize_impact \n 5. each_store_md_combo \n 6. holiday_impact \n 7. holiday_vs_md_amplify \n
+                ''')
+        
+        
+        #Ask for user input 
+        analysis_func_number = input('Analysis function you want to look at: ')
+
+        if analysis_func_number not in function_map:
+            print ('Function you choose are not in the list. Please try again!!')
+            logging.info('User is choosing the function again...')
+            continue 
+
+        else: 
+            analysis_func = function_map[analysis_func_number] 
+            logging.info(f'Analysis function about {analysis_func.__name__} is chosen')
+            break 
+
     file_name = input('What title do you want to save the file as: ')
     
     result_df, fig = analysis_func(df)
@@ -42,6 +64,7 @@ def load_results (df, output_path = OUTPUT_PATH):
     file_path = os.path.join(OUTPUT_PATH, f"{file_name}.csv")
     result_df.to_csv(file_path, index=True)
     
+    #As there are some function does not return chart 
     if fig is not None:
         logging.info(f"Saving the chart as image into {file_name}.png... ")
 
@@ -63,6 +86,7 @@ def load_results (df, output_path = OUTPUT_PATH):
  
     logging.info( f"{returned_output} for {analysis_func.__name__} saved to: {file_path}")
 
+
 # TEST RUN 
 
 if __name__ == "__main__":
@@ -75,24 +99,4 @@ if __name__ == "__main__":
         load_results(df)
 
 
-    # load_results(df, quarterly_sales_pattern, 
-    #             "quarterly_pattern")
-
-    # load_results(df, markdown_uplift_analysis_store,  
-    #             "markdown_uplift_per_store")
-
-    # load_results(df, markdown_uplift_analysis_store_size,  
-    #             "markdown_uplift_per_store_size")
-
-    # load_results(df, markdown_count_storesize_impact, 
-    #             "markdown_count_impact_on_storesize")
-
-    # load_results(df, lambda f: each_store_md_combo(f, "Less than 50k"), 
-    #             "md_combo_popularity_across_storesize")
-
-    # load_results(df, holiday_impact, 
-    #             "holiday_impact")
-
-    # load_results(df, holiday_vs_md_amplify, 
-    #             "holiday_markdown_combined_impact")
-
+    

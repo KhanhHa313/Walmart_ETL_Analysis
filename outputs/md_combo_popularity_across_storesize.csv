@@ -1,0 +1,12 @@
+Markdown_Type,Count_Obs,Median_Sales
+MarkDown1 + MarkDown3 + MarkDown5,130,507289.31499999994
+MarkDown3 + MarkDown5,8,484355.365
+MarkDown1 + MarkDown2 + MarkDown3 + MarkDown5,80,442892.265
+MarkDown1 + MarkDown3 + MarkDown4 + MarkDown5,66,424709.015
+MarkDown1 + MarkDown2 + MarkDown3 + MarkDown4 + MarkDown5,78,407626.54500000004
+MarkDown2 + MarkDown3 + MarkDown5,2,380863.525
+MarkDown1 + MarkDown2 + MarkDown4 + MarkDown5,29,351832.02999999997
+MarkDown1 + MarkDown5,73,330518.33999999997
+MarkDown1 + MarkDown2 + MarkDown5,25,328498.92
+MarkDown1 + MarkDown4 + MarkDown5,14,325440.685
+MarkDown5,5,312298.37

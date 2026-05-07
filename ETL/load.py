@@ -83,7 +83,7 @@ def load_results (df, output_path = OUTPUT_PATH):
         returned_output = "Table only (no chart)"
  
     logging.info( f"{returned_output} for {analysis_func.__name__} saved to: {file_path}")
-
+    print ("All done!! check your outputs folder")
 
 # TEST RUN 
 

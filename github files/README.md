@@ -143,9 +143,7 @@ python main.py
 *A bit about the main.py:*
 When prompted, you can select an analysis question by number. The pipeline will save the corresponding CSV and chart to the outputs folder automatically. Outputs will be saved to `outputs/` and logs written to `logs/pipeline.log`
 
-
 ![Options given](image.png)
- 
 
 ## Design Decisions
 

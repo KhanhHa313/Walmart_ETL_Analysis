@@ -55,7 +55,24 @@ def each_store_md_combo (df):
     #Define which combo of markdown work best for each store size with obs counts
     logging.info("Checking which combo of markdowns have most sales...")
     logging.info("User choose a size to investigate...")
-    input_size_category = input ("Choose the size category: ")
+
+    size_options= {'1' : 'Less than 50k',
+                    '2': 'Between 50k and 100k',
+                    '3': 'Between 100k and 150k',
+                    '4': 'Between 150k and 200k',
+                    '5': 'More than 200k'}
+
+    print(''' The options are: \n 1. Less than 50k \n 2. Between 50k and 100k \n 3. Between 100k and 150k \n 4. Between 150k and 200k \n 5. More than 200k ''')
+
+    while True: 
+        input_size_category_no = input ("Choose the size category (Pick a number!!): ")
+        if input_size_category_no not in size_options:
+            print ("Please pick a given store size in number (1,2,3...)")
+            continue
+        else: 
+            input_size_category = size_options[input_size_category_no]
+            info.logging(f'User choose to explore store size {input_size_category}')
+            break
 
     melted = df.melt (id_vars = ['Store','Size_Category', 'Date', 'Weekly_Sales'], 
                       value_vars = MARKDOWN_COLS,

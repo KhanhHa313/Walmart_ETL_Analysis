@@ -16,6 +16,17 @@ from analysis_question.quarterly_pattern import quarterly_sales_pattern
 def load_results (df, output_path = OUTPUT_PATH):
     '''Acts as a generalised loader that takes a dataframe and any analysis function, run it and save the result as CSVs 
     and corresponding charts as PNG'''
+
+    function_map = {
+        ('1' : 'quarterly_sales_pattern'),
+        ('2' : 'markdown_uplift_analysis_store'),
+        ('3' : 'markdown_uplift_analysis_store_size'),
+        ('4' : 'markdown_count_storesize_impact'),
+        ('5' : 'each_store_md_combo'),
+        ('6' : 'holiday_impact'),
+        ('7' : 'holiday_vs_md_amplify')
+    }
+ 
     analysis_func = input('Analysis function you want to look at: ')
     file_name = input('What title do you want to save the file as: ')
     

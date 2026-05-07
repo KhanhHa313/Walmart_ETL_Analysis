@@ -71,7 +71,7 @@ def each_store_md_combo (df):
             continue
         else: 
             input_size_category = size_options[input_size_category_no]
-            info.logging(f'User choose to explore store size {input_size_category}')
+            logging.info(f'User choose to explore store size {input_size_category}')
             break
 
     melted = df.melt (id_vars = ['Store','Size_Category', 'Date', 'Weekly_Sales'], 
@@ -99,5 +99,5 @@ if __name__ == "__main__":
                  parse_dates=['Date'])
                  
     setup_logging()
-    markdown_count_storesize_impact (df)
+    # markdown_count_storesize_impact (df)
     each_store_md_combo (df)

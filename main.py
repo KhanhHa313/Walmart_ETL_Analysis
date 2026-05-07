@@ -6,6 +6,7 @@ from ETL.extract import load_raw_data
 from utils.config import MARKDOWN_COLS, OUTPUT_PATH  
 import numpy as np
 from ETL.transform import merge_tables, update_data_types, fix_negative_or_zero_markdowns, add_columns, validate_dataframe, fix_negative_or_zero_sales
+from ETL.load import load_results
 
 def main():
 
@@ -31,4 +32,21 @@ def main():
     df.to_csv(os.path.join(OUTPUT_PATH, 'transformed_dataset.csv') , index = False)
 
     # 5. Second Load for analysis questions — interactive analysis menu
- 
+    df = pd.read_csv(os.path.join(OUTPUT_PATH, 'transformed_dataset.csv'), 
+                 parse_dates=['Date'])
+    
+    load_results(df)
+    while True: 
+        preference = input("Do you want to run another analysis (Y/N): ").lower()
+        if preference not in ['yes', 'no', 'y', 'n']:
+            print ("Please choose Yes or No!!!")
+            continue 
+        elif preference == 'y' or preference == 'yes':
+            logging.info('User decided to run another analysis')
+            load_results(df)
+        else: 
+            logging.info('User want to stop this analysis for now!')
+            break 
+    
+if __name__ == "__main__":
+    main()

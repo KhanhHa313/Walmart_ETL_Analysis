@@ -1,6 +1,7 @@
 import os
 import logging 
 import pandas as pd
+import matplotlib.pyplot as plt
 from utils.logging_set_up import setup_logging
 from utils.config import OUTPUT_PATH 
 from analysis_question.combined_impact import holiday_vs_md_amplify

@@ -1,11 +1,8 @@
 import os
 import logging 
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-import numpy as np
 from utils.logging_set_up import setup_logging
-from utils.config import OUTPUT_PATH, MARKDOWN_COLS
+from utils.config import OUTPUT_PATH 
 from analysis_question.combined_impact import holiday_vs_md_amplify
 from analysis_question.holiday_impact import holiday_impact
 from analysis_question.markdown_combo import markdown_count_storesize_impact, each_store_md_combo  

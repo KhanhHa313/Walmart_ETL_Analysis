@@ -14,35 +14,28 @@ The analysis questions a common retail assumption: that more promotional activit
 ## Repository Structure
 
 WALMART ETL/
-│
-├── main.py                     # Pipeline stage
-├── .gitignore                  # Excludes pycache
-│
 ├── etl/                        # Core pipeline modules
-│   ├── __init__.py
-│   ├── extract.py              # Data ingestion functions
-│   ├── transform.py            # Cleaning, merging, feature engineering
-│   └── load.py                 # Generalised output loader
-│
-├── utils/                      # Shared configuration and logging
-│   ├── __init__.py
-│   ├── config.py               # Centralised file paths and included components 
-│   └── logging_set_up.py       # Pipeline logging configuration
-│
-├── github files/               # Project documentation
-│   ├── README.md
-│   └── notebook.ipynb          # Original exploratory notebook
-│
-├── raw data/ 
+│   ├── extract.py              # Data ingestion (CSVs)
+│   ├── transform.py            # Cleaning & feature engineering
+│   ├── load.py                 # Export logic to outputs/
+│   └── __init__.py
+├── utils/                      # Shared helpers
+│   ├── config.py               # File paths & settings
+│   ├── logging_set_up.py       # Log formatting
+│   └── __init__.py
+├── raw_data/                   # Input CSV files
 │   ├── features.csv
-│   ├── sales.csv                
-│   └── store.csv                    
-│
-├── outputs/                    # Analysis result CSVs and charts
-│
-└── logs/                       # Pipeline execution logs
-    └── pipeline.log
- 
+│   ├── sales.csv
+│   └── store.csv
+├── outputs/                    # Processed results & charts
+├── logs/                       # Execution history
+│   └── pipeline.log
+├── docs/                       # Project documentation
+│   ├── README.md
+│   └── notebook.ipynb
+├── .gitignore                  # Skips __pycache__ and logs
+└── main.py                     # Entry point to run pipeline
+
 
 ## Dataset
 

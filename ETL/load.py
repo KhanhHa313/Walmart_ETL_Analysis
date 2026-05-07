@@ -91,9 +91,22 @@ if __name__ == "__main__":
                  parse_dates=['Date'])
     setup_logging()
 
-    for i in range (7):
-        #As there are 7 function in total
-        load_results(df)
+    # for i in range (7):
+    #     #As there are 7 function in total THIS IS FOR THE RUN TEST ONLY 
+    #     load_results(df)
 
+    load_results(df)
+    while True: 
+        preference = input("Do you want to run another analysis (Y/N): ").lower()
+        if preference not in ['yes', 'no', 'y', 'n']:
+            print ("Please choose Yes or No!!!")
+            continue 
+        elif preference == 'y' or preference == 'yes':
+            info.logging('User decided to run another analysis')
+            load_results(df)
+            break
+        else: 
+            info.logging('User want to stop this analysis for now!')
+            break 
 
     

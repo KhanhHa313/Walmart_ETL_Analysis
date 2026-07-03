@@ -489,3 +489,207 @@
 2026-05-07 14:12:30,484 - INFO - Saving the data file into Testing function 2.csv... 
 2026-05-07 14:12:30,485 - INFO - Saving the chart as image into Testing function 2.png... 
 2026-05-07 14:12:31,004 - INFO - Table and chart for quarterly_sales_pattern saved to: /Users/sarahnguyen313/Documents/Walmart-ETL-/outputs/Testing function 2.csv
+2026-07-03 20:21:05,337 - INFO - Logging initialised successfully
+2026-07-03 20:21:05,338 - INFO - Extracting the 3 dataset...
+2026-07-03 20:21:05,338 - INFO - Will start data extraction...
+2026-07-03 20:21:05,491 - INFO - Sales loaded: 421570 rows
+2026-07-03 20:21:05,497 - INFO - Stores loaded: 45 rows
+2026-07-03 20:21:05,504 - INFO - Features loaded: 8190 rows
+2026-07-03 20:21:05,504 - INFO - Extraction complete!!
+2026-07-03 20:21:05,504 - INFO - Merging and tranforming the dataset
+2026-07-03 20:21:05,504 - INFO - Proceed to merging the three tables
+2026-07-03 20:21:05,545 - INFO - Data merged successfully!!
+2026-07-03 20:21:05,545 - INFO - Proceed to updating the data type for the merged data frame
+2026-07-03 20:21:05,546 - INFO - Data astype complete!!
+2026-07-03 20:21:05,549 - INFO - Proceed to looking into negative and zero markdown data
+2026-07-03 20:21:05,550 - INFO - There is no markdown having more than 5.0% of negative
+2026-07-03 20:21:05,550 - INFO - The negatives have then been converted to NaN
+2026-07-03 20:21:05,551 - INFO - Negative and Zero markdown data records have been converted to NaN
+2026-07-03 20:21:05,551 - INFO - Adding the total markdown column
+2026-07-03 20:21:05,553 - INFO - Adding the markdown flag column
+2026-07-03 20:21:05,553 - INFO - Adding date component columns
+2026-07-03 20:21:05,555 - INFO - Adding the store size category column
+2026-07-03 20:21:05,563 - INFO - Adding the columns successfully!!
+2026-07-03 20:21:05,563 - INFO - Checking all the required columns for the analysis
+2026-07-03 20:21:05,563 - INFO - Dataframe validated - all required columns present
+2026-07-03 20:21:05,563 - INFO - Proceed to looking into negative and zero sales data
+2026-07-03 20:21:05,563 - INFO - There are less than 5.0% of Weekly_Sales that are <= 0
+2026-07-03 20:21:05,563 - INFO - These values then therefore will be converted to the median along with the other NaN unless stated otherwise
+2026-07-03 20:21:05,566 - INFO - Done the weekly_sales updates!!
+2026-07-03 20:21:05,566 - INFO - First load, saving the processed dataset in outputs folder
+2026-07-03 20:21:05,620 - INFO - Letting user choose the analysis question they want to look at...
+2026-07-03 20:21:14,389 - INFO - Analysis function about markdown_count_storesize_impact is chosen
+2026-07-03 20:21:17,087 - INFO - Checking impacts of different number of markdowns acorss store sizes...
+2026-07-03 20:21:17,301 - INFO - Drawing visualisable plot...
+2026-07-03 20:21:17,763 - INFO - Returning results and chart...
+2026-07-03 20:21:17,763 - INFO - Done the number of markdowns impact analysis!!
+2026-07-03 20:21:17,764 - INFO - Checking output folder exist, if not, create
+2026-07-03 20:21:17,764 - INFO - Saving the data file into dadas.csv... 
+2026-07-03 20:21:17,766 - INFO - Saving the chart as image into dadas.png... 
+2026-07-03 20:21:17,920 - INFO - Table and chart for markdown_count_storesize_impact saved to: /Users/sarahnguyen313/Documents/Walmart-ETL-/outputs/dadas.csv
+2026-07-03 20:21:19,580 - INFO - User want to stop this analysis for now!
+2026-07-03 20:21:24,589 - INFO - Logging initialised successfully
+2026-07-03 20:21:24,590 - INFO - Extracting the 3 dataset...
+2026-07-03 20:21:24,590 - INFO - Will start data extraction...
+2026-07-03 20:21:24,724 - INFO - Sales loaded: 421570 rows
+2026-07-03 20:21:24,726 - INFO - Stores loaded: 45 rows
+2026-07-03 20:21:24,733 - INFO - Features loaded: 8190 rows
+2026-07-03 20:21:24,733 - INFO - Extraction complete!!
+2026-07-03 20:21:24,733 - INFO - Merging and tranforming the dataset
+2026-07-03 20:21:24,733 - INFO - Proceed to merging the three tables
+2026-07-03 20:21:24,750 - INFO - Data merged successfully!!
+2026-07-03 20:21:24,750 - INFO - Proceed to updating the data type for the merged data frame
+2026-07-03 20:21:24,751 - INFO - Data astype complete!!
+2026-07-03 20:21:24,752 - INFO - Proceed to looking into negative and zero markdown data
+2026-07-03 20:21:24,753 - INFO - There is no markdown having more than 5.0% of negative
+2026-07-03 20:21:24,753 - INFO - The negatives have then been converted to NaN
+2026-07-03 20:21:24,754 - INFO - Negative and Zero markdown data records have been converted to NaN
+2026-07-03 20:21:24,754 - INFO - Adding the total markdown column
+2026-07-03 20:21:24,754 - INFO - Adding the markdown flag column
+2026-07-03 20:21:24,755 - INFO - Adding date component columns
+2026-07-03 20:21:24,755 - INFO - Adding the store size category column
+2026-07-03 20:21:24,756 - INFO - Adding the columns successfully!!
+2026-07-03 20:21:24,756 - INFO - Checking all the required columns for the analysis
+2026-07-03 20:21:24,756 - INFO - Dataframe validated - all required columns present
+2026-07-03 20:21:24,756 - INFO - Proceed to looking into negative and zero sales data
+2026-07-03 20:21:24,756 - INFO - There are less than 5.0% of Weekly_Sales that are <= 0
+2026-07-03 20:21:24,756 - INFO - These values then therefore will be converted to the median along with the other NaN unless stated otherwise
+2026-07-03 20:21:24,757 - INFO - Done the weekly_sales updates!!
+2026-07-03 20:21:24,757 - INFO - First load, saving the processed dataset in outputs folder
+2026-07-03 20:21:24,798 - INFO - Letting user choose the analysis question they want to look at...
+2026-07-03 20:21:46,423 - INFO - Logging initialised successfully
+2026-07-03 20:21:46,424 - INFO - Extracting the 3 dataset...
+2026-07-03 20:21:46,424 - INFO - Will start data extraction...
+2026-07-03 20:21:46,557 - INFO - Sales loaded: 421570 rows
+2026-07-03 20:21:46,558 - INFO - Stores loaded: 45 rows
+2026-07-03 20:21:46,564 - INFO - Features loaded: 8190 rows
+2026-07-03 20:21:46,564 - INFO - Extraction complete!!
+2026-07-03 20:21:46,564 - INFO - Merging and tranforming the dataset
+2026-07-03 20:21:46,564 - INFO - Proceed to merging the three tables
+2026-07-03 20:21:46,581 - INFO - Data merged successfully!!
+2026-07-03 20:21:46,582 - INFO - Proceed to updating the data type for the merged data frame
+2026-07-03 20:21:46,582 - INFO - Data astype complete!!
+2026-07-03 20:21:46,584 - INFO - Proceed to looking into negative and zero markdown data
+2026-07-03 20:21:46,585 - INFO - There is no markdown having more than 5.0% of negative
+2026-07-03 20:21:46,585 - INFO - The negatives have then been converted to NaN
+2026-07-03 20:21:46,586 - INFO - Negative and Zero markdown data records have been converted to NaN
+2026-07-03 20:21:46,586 - INFO - Adding the total markdown column
+2026-07-03 20:21:46,587 - INFO - Adding the markdown flag column
+2026-07-03 20:21:46,587 - INFO - Adding date component columns
+2026-07-03 20:21:46,588 - INFO - Adding the store size category column
+2026-07-03 20:21:46,589 - INFO - Adding the columns successfully!!
+2026-07-03 20:21:46,589 - INFO - Checking all the required columns for the analysis
+2026-07-03 20:21:46,589 - INFO - Dataframe validated - all required columns present
+2026-07-03 20:21:46,589 - INFO - Proceed to looking into negative and zero sales data
+2026-07-03 20:21:46,589 - INFO - There are less than 5.0% of Weekly_Sales that are <= 0
+2026-07-03 20:21:46,589 - INFO - These values then therefore will be converted to the median along with the other NaN unless stated otherwise
+2026-07-03 20:21:46,590 - INFO - Done the weekly_sales updates!!
+2026-07-03 20:21:46,590 - INFO - First load, saving the processed dataset in outputs folder
+2026-07-03 20:21:46,631 - INFO - Letting user choose the analysis question they want to look at...
+2026-07-03 20:24:40,872 - INFO - Analysis function about quarterly_sales_pattern is chosen
+2026-07-03 20:24:42,727 - INFO - Checking the quarterly sale patterns across years of all stores...
+2026-07-03 20:24:42,747 - INFO - Drawing visualisable plot...
+2026-07-03 20:24:43,201 - INFO - Returning results and chart...
+2026-07-03 20:24:43,201 - INFO - Done the quarterly sale analysis across years!!
+2026-07-03 20:24:43,201 - INFO - Checking output folder exist, if not, create
+2026-07-03 20:24:43,201 - INFO - Saving the data file into sdjasda.csv... 
+2026-07-03 20:24:43,202 - INFO - Saving the chart as image into sdjasda.png... 
+2026-07-03 20:24:43,354 - INFO - Table and chart for quarterly_sales_pattern saved to: /Users/sarahnguyen313/Documents/Walmart-ETL-/outputs/sdjasda.csv
+2026-07-03 20:24:44,721 - INFO - User want to stop this analysis for now!
+2026-07-03 20:24:49,730 - INFO - Logging initialised successfully
+2026-07-03 20:24:49,731 - INFO - Extracting the 3 dataset...
+2026-07-03 20:24:49,731 - INFO - Will start data extraction...
+2026-07-03 20:24:49,880 - INFO - Sales loaded: 421570 rows
+2026-07-03 20:24:49,882 - INFO - Stores loaded: 45 rows
+2026-07-03 20:24:49,888 - INFO - Features loaded: 8190 rows
+2026-07-03 20:24:49,888 - INFO - Extraction complete!!
+2026-07-03 20:24:49,888 - INFO - Merging and tranforming the dataset
+2026-07-03 20:24:49,888 - INFO - Proceed to merging the three tables
+2026-07-03 20:24:49,917 - INFO - Data merged successfully!!
+2026-07-03 20:24:49,917 - INFO - Proceed to updating the data type for the merged data frame
+2026-07-03 20:24:49,918 - INFO - Data astype complete!!
+2026-07-03 20:24:49,919 - INFO - Proceed to looking into negative and zero markdown data
+2026-07-03 20:24:49,920 - INFO - There is no markdown having more than 5.0% of negative
+2026-07-03 20:24:49,920 - INFO - The negatives have then been converted to NaN
+2026-07-03 20:24:49,921 - INFO - Negative and Zero markdown data records have been converted to NaN
+2026-07-03 20:24:49,921 - INFO - Adding the total markdown column
+2026-07-03 20:24:49,922 - INFO - Adding the markdown flag column
+2026-07-03 20:24:49,922 - INFO - Adding date component columns
+2026-07-03 20:24:49,924 - INFO - Adding the store size category column
+2026-07-03 20:24:49,924 - INFO - Adding the columns successfully!!
+2026-07-03 20:24:49,924 - INFO - Checking all the required columns for the analysis
+2026-07-03 20:24:49,924 - INFO - Dataframe validated - all required columns present
+2026-07-03 20:24:49,924 - INFO - Proceed to looking into negative and zero sales data
+2026-07-03 20:24:49,924 - INFO - There are less than 5.0% of Weekly_Sales that are <= 0
+2026-07-03 20:24:49,924 - INFO - These values then therefore will be converted to the median along with the other NaN unless stated otherwise
+2026-07-03 20:24:49,926 - INFO - Done the weekly_sales updates!!
+2026-07-03 20:24:49,926 - INFO - First load, saving the processed dataset in outputs folder
+2026-07-03 20:24:49,968 - INFO - Letting user choose the analysis question they want to look at...
+2026-07-03 20:25:29,776 - INFO - Logging initialised successfully
+2026-07-03 20:25:29,776 - INFO - Extracting the 3 dataset...
+2026-07-03 20:25:29,776 - INFO - Will start data extraction...
+2026-07-03 20:25:29,899 - INFO - Sales loaded: 421570 rows
+2026-07-03 20:25:29,900 - INFO - Stores loaded: 45 rows
+2026-07-03 20:25:29,909 - INFO - Features loaded: 8190 rows
+2026-07-03 20:25:29,909 - INFO - Extraction complete!!
+2026-07-03 20:25:29,909 - INFO - Merging and tranforming the dataset
+2026-07-03 20:25:29,909 - INFO - Proceed to merging the three tables
+2026-07-03 20:25:29,928 - INFO - Data merged successfully!!
+2026-07-03 20:25:29,928 - INFO - Proceed to updating the data type for the merged data frame
+2026-07-03 20:25:29,929 - INFO - Data astype complete!!
+2026-07-03 20:25:29,931 - INFO - Proceed to looking into negative and zero markdown data
+2026-07-03 20:25:29,932 - INFO - There is no markdown having more than 5.0% of negative
+2026-07-03 20:25:29,932 - INFO - The negatives have then been converted to NaN
+2026-07-03 20:25:29,934 - INFO - Negative and Zero markdown data records have been converted to NaN
+2026-07-03 20:25:29,934 - INFO - Adding the total markdown column
+2026-07-03 20:25:29,935 - INFO - Adding the markdown flag column
+2026-07-03 20:25:29,936 - INFO - Adding date component columns
+2026-07-03 20:25:29,936 - INFO - Adding the store size category column
+2026-07-03 20:25:29,937 - INFO - Adding the columns successfully!!
+2026-07-03 20:25:29,937 - INFO - Checking all the required columns for the analysis
+2026-07-03 20:25:29,937 - INFO - Dataframe validated - all required columns present
+2026-07-03 20:25:29,937 - INFO - Proceed to looking into negative and zero sales data
+2026-07-03 20:25:29,937 - INFO - There are less than 5.0% of Weekly_Sales that are <= 0
+2026-07-03 20:25:29,937 - INFO - These values then therefore will be converted to the median along with the other NaN unless stated otherwise
+2026-07-03 20:25:29,938 - INFO - Done the weekly_sales updates!!
+2026-07-03 20:25:29,938 - INFO - First load, saving the processed dataset in outputs folder
+2026-07-03 20:25:29,983 - INFO - Letting user choose the analysis question they want to look at...
+2026-07-03 20:37:40,357 - INFO - Logging initialised successfully
+2026-07-03 20:37:40,357 - INFO - Extracting the 3 dataset...
+2026-07-03 20:37:40,357 - INFO - Will start data extraction...
+2026-07-03 20:37:40,512 - INFO - Sales loaded: 421570 rows
+2026-07-03 20:37:40,515 - INFO - Stores loaded: 45 rows
+2026-07-03 20:37:40,525 - INFO - Features loaded: 8190 rows
+2026-07-03 20:37:40,525 - INFO - Extraction complete!!
+2026-07-03 20:37:40,525 - INFO - Merging and tranforming the dataset
+2026-07-03 20:37:40,526 - INFO - Proceed to merging the three tables
+2026-07-03 20:37:40,556 - INFO - Data merged successfully!!
+2026-07-03 20:37:40,556 - INFO - Proceed to updating the data type for the merged data frame
+2026-07-03 20:37:40,556 - INFO - Data astype complete!!
+2026-07-03 20:37:40,559 - INFO - Proceed to looking into negative and zero markdown data
+2026-07-03 20:37:40,559 - INFO - There is no markdown having more than 5.0% of negative
+2026-07-03 20:37:40,559 - INFO - The negatives have then been converted to NaN
+2026-07-03 20:37:40,560 - INFO - Negative and Zero markdown data records have been converted to NaN
+2026-07-03 20:37:40,561 - INFO - Adding the total markdown column
+2026-07-03 20:37:40,562 - INFO - Adding the markdown flag column
+2026-07-03 20:37:40,562 - INFO - Adding date component columns
+2026-07-03 20:37:40,564 - INFO - Adding the store size category column
+2026-07-03 20:37:40,565 - INFO - Adding the columns successfully!!
+2026-07-03 20:37:40,565 - INFO - Checking all the required columns for the analysis
+2026-07-03 20:37:40,565 - INFO - Dataframe validated - all required columns present
+2026-07-03 20:37:40,565 - INFO - Proceed to looking into negative and zero sales data
+2026-07-03 20:37:40,565 - INFO - There are less than 5.0% of Weekly_Sales that are <= 0
+2026-07-03 20:37:40,565 - INFO - These values then therefore will be converted to the median along with the other NaN unless stated otherwise
+2026-07-03 20:37:40,566 - INFO - Done the weekly_sales updates!!
+2026-07-03 20:37:40,566 - INFO - First load, saving the processed dataset in outputs folder
+2026-07-03 20:37:40,609 - INFO - Letting user choose the analysis question they want to look at...
+2026-07-03 20:37:45,376 - INFO - Analysis function about markdown_uplift_analysis_store_size is chosen
+2026-07-03 20:37:47,391 - INFO - Checking the markdown sales uplift across all stores...
+2026-07-03 20:37:47,408 - INFO - Drawing visualisable plot...
+2026-07-03 20:37:47,916 - INFO - Returning results and chart...
+2026-07-03 20:37:47,916 - INFO - Done the store size markdown uplift analysis!!
+2026-07-03 20:37:47,916 - INFO - Checking output folder exist, if not, create
+2026-07-03 20:37:47,917 - INFO - Saving the data file into ddd.csv... 
+2026-07-03 20:37:47,918 - INFO - Saving the chart as image into ddd.png... 
+2026-07-03 20:37:48,076 - INFO - Table and chart for markdown_uplift_analysis_store_size saved to: /Users/sarahnguyen313/Documents/Walmart-ETL-/outputs/ddd.csv
+2026-07-03 20:37:50,763 - INFO - User want to stop this analysis for now!
